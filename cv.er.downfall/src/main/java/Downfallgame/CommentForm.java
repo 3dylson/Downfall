@@ -8,6 +8,10 @@ import javax.ws.rs.FormParam;
 import java.io.Serializable;
 
 public class CommentForm implements Serializable {
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
     @NotNull
     @Size(min = 1, max = 10)
     @Pattern(regexp = "[a-zA-Z0-9]+")

@@ -9,6 +9,10 @@ import java.util.concurrent.CopyOnWriteArrayList;
 @ApplicationScoped
 @Named
 public class Comments implements Serializable {
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
     private final List<String> comments = new CopyOnWriteArrayList<>();
 
     public void addComment(String comment) {
