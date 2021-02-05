@@ -26,7 +26,7 @@ public class GameBoard {
     }
 
     /** User input to turn the wheel to Angle. Returns False if not successful. */
-    Boolean TurnWheel(int WheelNo, int Angle){
+    public Boolean TurnWheel(int WheelNo, int Angle){
 
     }
     
