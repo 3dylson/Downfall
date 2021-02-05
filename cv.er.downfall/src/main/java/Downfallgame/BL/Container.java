@@ -1,5 +1,7 @@
 package Downfallgame.BL;
 
+import Downfallgame.PL.ContainerView;
+
 /** Hold the balls and be able to hand over balls or to receive balls. */
 public class Container {
     
@@ -49,6 +51,25 @@ public class Container {
     /** Add an acceptor at angle. If there is a ball at an slot, which is set to this angle, ball transfer to acceptor is initiated. */
     public void AddAcceptor(Container Acceptor, Integer Angle) {
         
+    }
+
+    /** Returns a two dimensional matrix of the slots and the balls they have. */
+    public Ball[NSlotNumber][] GetBalls(){
+        
+    }
+
+    /**
+     * This method is invoked after a view has been signed up
+     * @return the non changing parameters (number of slots, their size, their angle, etc).
+     */
+    public Integer[] GetParameters(){
+
+    }
+
+
+    /** With this method we can attach a view to the Container, and if some change in its state occurs, the view can be notified.  */
+    public void AddView (ContainerView){
+
     }
 
 }
