@@ -5,12 +5,14 @@ public class Axle {
 
     /** Turns all its wheels with the given angle. */
     public void TurnTo() {
-        
+       
     }
 
     /** Adds a new wheel to the axle. */
     public void AddWheel() {
-        
+       
+        // wheel++;
+        // return wheel;
     }
     
 }
