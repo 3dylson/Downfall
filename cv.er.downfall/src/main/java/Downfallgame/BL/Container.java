@@ -23,8 +23,8 @@ public class Container {
     /** This vector shows for each slot how much balls it can contain. */
     protected int[] SlotSize;
 
-    public Container donor;
-    public Container acceptor;
+    public List<Container> donor;
+    public List<Container> acceptor;
     public List<Ball> balls = new ArrayList<Ball>();
 
     public ContainerView theView;

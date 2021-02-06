@@ -17,16 +17,20 @@ public class GameBoard {
     protected Player CurrPlayer;
 
     public List<Axle> m_Axle;
-    public GameType type;
-    public Storage m_Storage;
-    public Collector m_Collector;
+    public List<GameType> type;
+    public List<Storage> m_Storage;
+    public List<Collector> m_Collector;
     
 
     public GameBoard(){}
     
     /** Start a new game. Initialize game objects. */
     public void NewGame() {
-        
+        new Axle();
+        new Wheel();
+        new Storage();
+        new GameType();
+        new Collector();        
     }
 
     /** Collector calls Game Over, if the game is finished. The winner player is indicated. */
