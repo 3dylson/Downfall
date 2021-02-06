@@ -9,6 +9,8 @@ public class Ball {
     /** Color of Ball. */
     private int colour;
 
+    public Container Container;
+
     /**
     * 
      * @return the ball’s number.
