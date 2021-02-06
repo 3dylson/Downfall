@@ -1,14 +1,28 @@
 package Downfallgame.BL;
 
-/** It consists of several containers, and it sends the actors messages to the wheels. */
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * It consists of several containers, and it sends the actors messages to the
+ * wheels.
+ */
 public class GameBoard {
     
     /** Stores game parameters (number of axles, game type, etc.) */
-    protected GameParameters GameParameters;
+    protected GameParameters GameParameters;// TODO GameParameters Class
+    
     
     /** The current player. Game board is drawn based on this. */
-    protected Player CurrPlayer;
+    protected Player CurrPlayer;// TODO Player Class
 
+    public List<Axle> m_Axle;
+    public GameType type;
+    public Storage m_Storage;
+    public Collector m_Collector;
+    
+
+    public GameBoard(){}
     
     /** Start a new game. Initialize game objects. */
     public void NewGame() {
@@ -22,6 +36,7 @@ public class GameBoard {
 
     /** Configure game parameters. */
     public void ConfigureGame(){
+        
 
     }
 

@@ -23,6 +23,16 @@ public class Wheel {
     protected void DeleteBall(Ball ball) {
         
     }
+
+
+    /**
+     * 
+     * @return the current angle.
+     */
+    public Integer GetAngle() {
+        return Angle;
+        
+    }
         
     
     

@@ -1,5 +1,7 @@
 package Downfallgame.BL;
 
+import java.util.List;
+
 import Downfallgame.PL.ContainerView;
 
 /** Hold the balls and be able to hand over balls or to receive balls. */
@@ -20,6 +22,12 @@ public class Container {
     /** This vector shows for each slot how much balls it can contain. */
     protected int[] SlotSize;
 
+    public Container donor;
+    public Container acceptor;
+    public List<Ball> balls;
+
+
+    public Container(){}
 
     /** Check if the Container is able to receive a ball at Angle. If it is, it accepts the ball indicated by BallNumber and returns True. Otherwise it returns False. */
     boolean Receive(Ball BallNumber, Container donor) {
@@ -29,7 +37,7 @@ public class Container {
 
     /** Add a slot to the container. The slot is at Angle, and able to hold Size balls. */
     public void AddSlot(Integer Angle, Integer Size) {
-                
+                        
     }
 
     /** Accept a ball at an agle. If the neighbour (donor) is able to transfer a ball at angle, it returns the BallNumber. Otherwise it returns zero. */
