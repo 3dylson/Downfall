@@ -10,11 +10,11 @@ import java.util.List;
 public class GameBoard {
     
     /** Stores game parameters (number of axles, game type, etc.) */
-    protected GameParameters GameParameters;// TODO GameParameters Class
+    protected GameParameters GameParameters;
     
     
     /** The current player. Game board is drawn based on this. */
-    protected Player CurrPlayer;// TODO Player Class
+    protected Player CurrPlayer;
 
     public List<Axle> m_Axle;
     public GameType type;
@@ -42,6 +42,7 @@ public class GameBoard {
 
     /** User input to turn the wheel to Angle. Returns False if not successful. */
     public Boolean TurnWheel(int WheelNo, int Angle){
+        return null;
 
     }
     

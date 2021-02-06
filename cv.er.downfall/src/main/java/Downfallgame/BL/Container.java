@@ -1,5 +1,6 @@
 package Downfallgame.BL;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import Downfallgame.PL.ContainerView;
@@ -8,10 +9,10 @@ import Downfallgame.PL.ContainerView;
 public class Container {
     
     /** X position of the object on the screen. */
-    protected int PosX;
+    protected int PosX = 0;
     
     /** Y position of the object on the screen. */
-    protected int PosY;
+    protected int PosY = 0;
 
     /** Number of slots in this object */
     protected int NSlots;
@@ -24,13 +25,21 @@ public class Container {
 
     public Container donor;
     public Container acceptor;
-    public List<Ball> balls;
+    public List<Ball> balls = new ArrayList<Ball>();
+
+    public ContainerView theView;
 
 
-    public Container(){}
+    /** Constructor */
+    public Container(){};
+
+    public Container(int PosX, int PosY, int NSlots, int[] SlotAngle, int[] SlotSize){
+        this.PosX=PosX;
+        this.PosY=PosY;
+    }
 
     /** Check if the Container is able to receive a ball at Angle. If it is, it accepts the ball indicated by BallNumber and returns True. Otherwise it returns False. */
-    boolean Receive(Ball BallNumber, Container donor) {
+    boolean Receive(Ball BallNumber, Container donor) {        
         return false;
         
     }
@@ -62,7 +71,8 @@ public class Container {
     }
 
     /** Returns a two dimensional matrix of the slots and the balls they have. */
-    public Ball[NSlotNumber][] GetBalls(){
+    public Ball[][] GetBalls(){
+        return null;
         
     }
 
@@ -71,13 +81,14 @@ public class Container {
      * @return the non changing parameters (number of slots, their size, their angle, etc).
      */
     public Integer[] GetParameters(){
+        return null;
 
     }
 
 
     /** With this method we can attach a view to the Container, and if some change in its state occurs, the view can be notified.  */
-    public void AddView (ContainerView){
+    //  public void AddView (ContainerView){
 
-    }
+    //  }
 
 }

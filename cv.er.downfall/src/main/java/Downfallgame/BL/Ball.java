@@ -9,14 +9,29 @@ public class Ball {
     /** Color of Ball. */
     private int colour;
 
-    /** Returns the ball’s number. */
-    public void getNumber() {
+    /**
+    * 
+     * @return the ball’s number.
+     */
+    public int getNumber() {
+        return number;
         
     }
 
-    /** Returns the ball’s colour. */
-    public void getColour() {
-        
+    public void setNumber(int number){
+        this.number = number;
+    }
+
+    /**
+     * 
+     * @return the ball’s colour.
+     */
+    public int getColour() {
+        return colour;
+    }
+
+    public void setColour(int colour){
+        this.colour = colour;
     }
         
     
