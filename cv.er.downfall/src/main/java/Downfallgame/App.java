@@ -1,28 +1,12 @@
 package Downfallgame;
 
-import javax.mvc.security.Csrf;
-import javax.ws.rs.ApplicationPath;
-import javax.ws.rs.core.Application;
-
 import Downfallgame.BL.Axle;
 import Downfallgame.BL.GameBoard;
-import Downfallgame.BL.Storage;
 import Downfallgame.BL.Wheel;
 
-import java.util.HashMap;
-import java.util.Map;
+public class App {
 
-@ApplicationPath("app")
-public class App extends Application {
-    @Override
-    public Map<String, Object> getProperties() {
-        Map<String, Object> props = new HashMap<>();
-        props.put(Csrf.CSRF_PROTECTION, Csrf.CsrfOptions.EXPLICIT);
-        return props;
-        
-    }
-
-public static void main(String[] args) {
+    public static void main(String[] args) {
 
     
     new GameBoard();
@@ -49,5 +33,5 @@ public static void main(String[] args) {
 
     
 }
-
+    
 }
