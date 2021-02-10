@@ -10,7 +10,7 @@ public class GameType {
      * @param ball
      * @return means either the game can continue, or the game is lost to the given player, or the game is won by the given player.
      */
-    public Enumeration NextBall(Ball ball ) {
+    public Enumeration<Ball> NextBall(Ball ball ) {
         return null;        
     } 
 
