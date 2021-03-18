@@ -37,6 +37,8 @@ public class Container {
         this.PosX = PosX;
         this.PosY = PosY;
         this.NSlots = NSlots;
+        this.SlotAngle = SlotAngle;
+        this.SlotSize = SlotSize;
     }
 
     /**
@@ -55,8 +57,6 @@ public class Container {
      * balls.
      */
     public void AddSlot(Integer Angle, Integer Size) {
-        Angle = 0;
-        Size = 1;
         NSlots++;
         SlotAngle.add(Angle);
         SlotSize.setSize(Size);
@@ -67,6 +67,7 @@ public class Container {
      * at angle, it returns the BallNumber. Otherwise it returns zero.
      */
     public Ball Offer(Container acceptor) {
+
         return null;
 
     }
@@ -81,7 +82,11 @@ public class Container {
      * angle, ball transfer from donor is initiated.
      */
     public void AddDonor(Container Donor, Integer Angle) {
-
+        donor.add(Donor);
+        Donor.SlotAngle.add(Angle);
+        if (Donor.SlotSize != null) {
+            Offer(Donor);
+        }
     }
 
     /**
