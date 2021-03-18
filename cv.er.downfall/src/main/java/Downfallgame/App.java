@@ -8,12 +8,13 @@ public class App {
 
     public static void main(String[] args) {
 
-    
-    new GameBoard();
+        System.out.printf("Hello");
+
+    /*new GameBoard();
     Wheel wheel = new Wheel(); 
 
     Axle GameBoard = new Axle();
-    GameBoard.AddWheel(wheel);
+    GameBoard.AddWheel(wheel);*/
 
     
 

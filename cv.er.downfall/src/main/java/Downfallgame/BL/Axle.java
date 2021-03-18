@@ -8,7 +8,6 @@ import java.util.List;
  */
 public class Axle {
 
-    public GameBoard GameBoard;
     public List<Wheel> wheels;
 
     /** Turns all its wheels with the given angle. */
@@ -20,5 +19,5 @@ public class Axle {
     public void AddWheel(Wheel wheel) {
         this.wheels.add(wheel);         
     }
-    
+
 }

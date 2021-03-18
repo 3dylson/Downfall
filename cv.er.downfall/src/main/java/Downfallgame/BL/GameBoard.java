@@ -12,7 +12,6 @@ public class GameBoard {
     /** Stores game parameters (number of axles, game type, etc.) */
     protected GameParameters GameParameters;
     
-    
     /** The current player. Game board is drawn based on this. */
     protected Player CurrPlayer;
 
