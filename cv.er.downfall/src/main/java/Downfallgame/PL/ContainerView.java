@@ -15,19 +15,19 @@ public class ContainerView {
 
     private Integer PosX;
     private Integer PosY;
-    private Integer[] SlotAngle; 
+    private Integer[] SlotAngle;
     private Integer[] SlotSize;
     private Integer NSlots;
     private Integer[] NeighbourAngle;
     private Integer NNeighbours;
 
     public List<Ball> balls;
-    
-    public void Notify(){
+
+    public void Notify() {
 
     }
 
     public void AddModel(Container model) {
-        
+
     }
 }
