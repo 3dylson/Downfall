@@ -1,4 +1,4 @@
-# Downfall Game:
+# Downfall Game(in progress):
 This game is an N player game (N >= 2, and is an arbitrarily large integer). It consists of a vertical board of N sides. There are dials built into the board. The dials can be seen on all sides of the board. If a dial is rotated, all of its sides rotate together. There are slots on the edges of the dials. The number of slots and the positions of the slots may be different on different sides of the same dial.
 
 Each player starts with some numbered tokens or discs at the top of the board. A single token fits exactly into a single slot. When the slots of two touching dials are aligned, the token from the higher slot falls into the lower slot.
