@@ -25,7 +25,7 @@ public class Container {
 
     public List<Container> donor;
     public List<Container> acceptor;
-    public List<Ball> balls;
+    public Ball[][] balls;
 
     public ContainerView theView;
 
@@ -47,8 +47,14 @@ public class Container {
      * returns False.
      */
     boolean Receive(Ball BallNumber, Container donor) {
+        if (donor.SlotSize.contains(BallNumber)) {
+            ;
+            return true;
+        }
 
-        return false;
+        else {
+            return false;
+        }
 
     }
 
@@ -57,13 +63,14 @@ public class Container {
      * balls.
      */
     public void AddSlot(Integer Angle, Integer Size) {
+        Size = 1;
         NSlots++;
         SlotAngle.add(Angle);
         SlotSize.setSize(Size);
     }
 
     /**
-     * Accept a ball at an agle. If the neighbour (donor) is able to transfer a ball
+     * Accept a ball at an angle. If the neighbor (donor) is able to transfer a ball
      * at angle, it returns the BallNumber. Otherwise it returns zero.
      */
     public Ball Offer(Container acceptor) {
@@ -94,12 +101,17 @@ public class Container {
      * angle, ball transfer to acceptor is initiated.
      */
     public void AddAcceptor(Container Acceptor, Integer Angle) {
+        acceptor.add(Acceptor);
+        Acceptor.SlotAngle.add(Angle);
+        if (Acceptor.SlotSize != null) {
+            Offer(Acceptor);
+        }
 
     }
 
     /** Returns a two dimensional matrix of the slots and the balls they have. */
     public Ball[][] GetBalls() {
-        return null;
+        return balls;
 
     }
 
@@ -110,6 +122,7 @@ public class Container {
      *         angle, etc).
      */
     public Integer[] GetParameters() {
+        // TODO impl later
         return null;
 
     }
