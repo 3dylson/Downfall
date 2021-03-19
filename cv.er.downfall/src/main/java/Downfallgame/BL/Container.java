@@ -25,7 +25,7 @@ public class Container {
 
     public List<Container> donor;
     public List<Container> acceptor;
-    public Ball[][] balls;
+    public List<Ball> balls;
 
     public ContainerView theView;
 
@@ -47,8 +47,8 @@ public class Container {
      * returns False.
      */
     boolean Receive(Ball BallNumber, Container donor) {
-        if (donor.SlotSize.contains(BallNumber)) {
-            ;
+        if (donor.balls.contains(BallNumber)) {
+            Offer(this);
             return true;
         }
 
@@ -74,12 +74,19 @@ public class Container {
      * at angle, it returns the BallNumber. Otherwise it returns zero.
      */
     public Ball Offer(Container acceptor) {
+        Ball ball;
+        int num = ball.getNumber();
+        if (acceptor.SlotSize.isEmpty()) {
+            acceptor.balls.add(ball);
 
-        return null;
+            return balls.get(num);
+        } else {
+            return balls;
+        }
 
     }
 
-    /** Draw the object on the sceen. */
+    /** Draw the object on the screen. */
     public void Draw() {
 
     }
@@ -111,7 +118,7 @@ public class Container {
 
     /** Returns a two dimensional matrix of the slots and the balls they have. */
     public Ball[][] GetBalls() {
-        return balls;
+        return null;
 
     }
 
@@ -131,8 +138,8 @@ public class Container {
      * With this method we can attach a view to the Container, and if some change in
      * its state occurs, the view can be notified.
      */
-    // public void AddView (ContainerView){
+    public void AddView(ContainerView theView) {
 
-    // }
+    }
 
 }

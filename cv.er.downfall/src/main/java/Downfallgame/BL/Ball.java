@@ -9,6 +9,11 @@ public class Ball {
     /** Color of Ball. */
     private int colour;
 
+    public Ball(int number, int colour) {
+        this.number = number;
+        this.colour = colour;
+    };
+
     /**
      * 
      * @return the ball’s number.
